@@ -5,14 +5,13 @@ const buttonsArray = Array.from(imageButtons);
 
 let currentIMG = 0;
 let timeout = setTimeout( moveRight, 5000 );
+
 const carouselButtons = document.querySelector('.carouselButtons');
 carouselButtons.addEventListener('click', (event)=>{
   if ( event.target.closest('.lastImage')) {
     moveLeft ( );
-
   } else if ( event.target.closest('.nextImage') ) {
     moveRight ( );
-
   } else if ( event.target.closest('.imageButton') && !event.target.closest('.imageButton').classList.contains('active')) {
     let buttonID = event.target.closest('.imageButton').id;
     let newIMG;
